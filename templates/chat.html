@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head><title>Chat with {{ receiver_id }}</title></head>
+<body>
+    <h2>Chat with {{ receiver_id }}</h2>
+    <div>
+        {% for msg in messages %}
+            <p><strong>{{ msg.sender }}:</strong> {{ msg.text }}</p>
+        {% endfor %}
+    </div>
+    <form method="post">
+        <textarea name="message" required></textarea>
+        <button type="submit">Send</button>
+    </form>
+    <br>
+    <a href="/dashboard">← Back</a>
+</body>
+</html>

@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head><title>Dashboard</title></head>
+<body>
+    <h2>Welcome, {{ user_id }}</h2>
+    <form method="get" action="/chat/">
+        <input name="receiver" placeholder="Receiver User ID" required>
+        <button type="submit" onclick="this.form.action = '/chat/' + this.form.receiver.value;">Chat</button>
+    </form>
+    <br>
+    <a href="/logout">Logout</a>
+</body>
+</html>
